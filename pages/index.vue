@@ -1,7 +1,7 @@
 <template>
     <div class="page">
         <main class="accounts">
-            
+            <p>Home</p>
         </main>
     </div>
 </template>
