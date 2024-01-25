@@ -5,10 +5,11 @@
         </main>
     </div>
 </template>
-<style scoped>
+<style scoped lang="scss">
+
 div.page {
     height: 100vh;
     width: 100vw;
-    background: radial-gradient(rgb(221, 221, 221),rgb(180, 180, 180));
+    background: radial-gradient($white-background-1,$white-background-2);
 }
 </style>
