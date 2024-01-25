@@ -6,7 +6,6 @@
     </div>
 </template>
 <style scoped lang="scss">
-
 div.page {
     height: 100vh;
     width: 100vw;
