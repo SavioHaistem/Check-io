@@ -12,5 +12,14 @@ export default defineNuxtConfig({
   },
   imports: {
     autoImport: true
+  },
+  modules: ['@nuxt/image'],
+  image: {
+    inject: true,
+    quality: 80,
+    format: ['jpg','jpeg','img'],
+    screens: {
+      'xs':320
+    }
   }
 })

@@ -1,6 +1,5 @@
 {
   "name": "check.io",
-  "private": false,
   "type": "module",
   "scripts": {
     "build": "nuxt build",
@@ -10,6 +9,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/image": "latest",
     "@pinia/nuxt": "^0.5.1",
     "nuxt": "^3.9.3",
     "sass": "^1.70.0",

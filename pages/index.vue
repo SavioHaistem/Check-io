@@ -15,10 +15,20 @@
     <main class="accounts">
       <ul class="employees" v-if="!selectedUser">
         <li class="employee" @click="selectedUser = 'savio'">
-          <p>name</p>
+          <img
+            src="@/assets/usersIcons/fabio.jpeg"
+            alt="employee"
+            width="140"
+            class="employeeIcon"
+          />
         </li>
         <li class="employee" @click="selectedUser = 'savio'">
-          <p>name</p>
+          <img
+            src="@/assets/usersIcons/jacy.jpeg"
+            alt="employee"
+            width="140"
+            class="employeeIcon"
+          />
         </li>
       </ul>
       <div v-else>
@@ -58,7 +68,7 @@
     grid-auto-flow: column;
     justify-content: center;
   }
-li.employee {
+  li.employee {
     display: flex;
     width: 8rem;
     height: 8rem;
@@ -66,6 +76,11 @@ li.employee {
     align-items: center;
     border-radius: 100%;
     background-color: $dark-background-1;
+  }
+
+  li.employee {
+    overflow: hidden;
+    border: 8px solid rgb(250, 250, 250);
   }
 
   div.login-input {
