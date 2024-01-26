@@ -11,6 +11,6 @@ body {
     width: 100vw;
     overflow: hidden;
     color: $white-text;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 </style>

@@ -1,14 +1,78 @@
+<script>
+  export default {
+    data() {
+      return {
+        selectedUser: undefined,
+      }
+    },
+  }
+</script>
 <template>
-    <div class="page">
-        <main class="accounts">
-            <p>Home</p>
-        </main>
-    </div>
+  <div class="page">
+    <header class="header">
+      <p>Check Point</p>
+    </header>
+    <main class="accounts">
+      <ul class="employees" v-if="!selectedUser">
+        <li class="employee" @click="selectedUser = 'savio'">
+          <p>name</p>
+        </li>
+        <li class="employee" @click="selectedUser = 'savio'">
+          <p>name</p>
+        </li>
+      </ul>
+      <div v-else>
+        <div class="login-input">
+          <li class="employee">
+            <p>name</p>
+          </li>
+          <CellsPasswordInput />
+        </div>
+      </div>
+    </main>
+  </div>
 </template>
 <style scoped lang="scss">
-div.page {
+  div.page {
     height: 100vh;
     width: 100vw;
-    background: radial-gradient($white-background-1,$white-background-2);
-}
+    background: radial-gradient($white-background-1, $white-background-2);
+    display: grid;
+    grid-template-rows: 20vh 60vh;
+    justify-content: center;
+    align-items: center;
+  }
+  div.page > header.header {
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem 0px;
+    font-size: 20px;
+  }
+  main.accounts > ul.employees {
+    height: fit-content;
+    padding: 1rem;
+    gap: 1rem;
+    width: 80vw;
+    display: grid;
+    grid-auto-columns: min-content;
+    grid-auto-flow: column;
+    justify-content: center;
+  }
+li.employee {
+    display: flex;
+    width: 8rem;
+    height: 8rem;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 100%;
+    background-color: $dark-background-1;
+  }
+
+  div.login-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 4rem;
+  }
 </style>
