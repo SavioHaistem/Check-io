@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   imports: {
     autoImport: true
   },
-  modules: ['@nuxt/image'],
+  modules: ['@nuxt/image','@pinia/nuxt'],
   image: {
     inject: true,
     quality: 80,
@@ -21,5 +21,5 @@ export default defineNuxtConfig({
     screens: {
       'xs':320
     }
-  }
+  },
 })

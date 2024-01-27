@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@nuxt/image": "latest",
+    "@nuxt/types": "2.13.2",
     "@pinia/nuxt": "^0.5.1",
     "nuxt": "^3.9.3",
     "sass": "^1.70.0",

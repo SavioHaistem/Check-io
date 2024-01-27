@@ -1,30 +1,27 @@
-<script>
-  export default {
-    data() {
-      return {
-        selectedUser: undefined,
-      }
-    },
+<script lang="ts" setup>
+  import { useEmployees } from '~/stores/employees'
+  export interface employee {
+    name: string
+    icon: string
   }
+
+  const employeesStore = useEmployees()
 </script>
 <template>
   <div class="page">
     <header class="header">
       <p>Check Point</p>
+      <p>{{ employeesStore.getSelectedEmployee.name }}</p>
     </header>
     <main class="accounts">
-      <ul class="employees" v-if="!selectedUser">
-        <li class="employee" @click="selectedUser = 'savio'">
+      <ul class="employees" v-if="!employeesStore.getSelectedEmployee.name">
+        <li
+          class="employee"
+          v-for="(employee, index) in employeesStore.getEmployees"
+          @click="employeesStore.selectEmployee(index)"
+        >
           <img
-            src="@/assets/usersIcons/fabio.jpeg"
-            alt="employee"
-            width="140"
-            class="employeeIcon"
-          />
-        </li>
-        <li class="employee" @click="selectedUser = 'savio'">
-          <img
-            src="@/assets/usersIcons/jacy.jpeg"
+            :src="employee.icon"
             alt="employee"
             width="140"
             class="employeeIcon"
@@ -34,7 +31,7 @@
       <div v-else>
         <div class="login-input">
           <li class="employee">
-            <p>name</p>
+            <img :src="employeesStore.getSelectedEmployee.icon" alt="employee icon" />
           </li>
           <CellsPasswordInput />
         </div>
